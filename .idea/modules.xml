@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../GetNetData/GetNetData.iml" filepath="$PROJECT_DIR$/../GetNetData/GetNetData.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../IdeaProjects/IdeaProjects.iml" filepath="$PROJECT_DIR$/../IdeaProjects/IdeaProjects.iml" />
+      <module fileurl="file://$PROJECT_DIR$/src/main/test/testJframe/testJframe.iml" filepath="$PROJECT_DIR$/src/main/test/testJframe/testJframe.iml" />
+      <module fileurl="file://$PROJECT_DIR$/zybolg.iml" filepath="$PROJECT_DIR$/zybolg.iml" />
+    </modules>
+  </component>
+</project>

@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="zybolg:war exploded" />
+    </artifacts-to-build>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="699babb9-f752-4466-9eef-5a901dc4dabf" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="JavaScript File" />
+        <option value="Jsp File" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="$PROJECT_DIR$/../apache-maven-3.5.2" />
+        <option name="userSettingsFile" value="D:\apache-maven-3.5.2\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="MavenRunner">
+    <option name="jreName" value="1.8" />
+    <option name="vmOptions" value="-DarchetypeCatalog=local" />
+  </component>
+  <component name="ProjectId" id="1SFB5RdOs6itBQYvQ1j3PpDApAZ" />
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="GenerateAntBuildDialog.backupFiles" value="true" />
+    <property name="GenerateAntBuildDialog.enableUiFormCompile" value="true" />
+    <property name="GenerateAntBuildDialog.forceTargetJdk" value="true" />
+    <property name="GenerateAntBuildDialog.outputFileNameProperty" value="zybolg" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/web/img" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.runner" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\zybolg\web\img" />
+      <recent name="D:\zybolg\src\main\test\testJframe" />
+      <recent name="D:\zybolg\web" />
+      <recent name="D:\zybolg\web\WEB-INF\lib" />
+      <recent name="D:\zybolg\web\linux_img" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="main.filter" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\zybolg\web\img" />
+      <recent name="D:\zybolg\src\main\test\testJframe" />
+      <recent name="D:\zybolg\src" />
+      <recent name="D:\zybolg\web" />
+      <recent name="D:\zybolg\web\js" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Tomcat Server.Tomcat 8.5.43">
+    <configuration name="getNetImg" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="getNetImg" />
+      <module name="GetNetData" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="testMyJFrame" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="main.test.testJframe.testMyJFrame" />
+      <module name="zybolg" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="main.test.testJframe.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="home_test_1.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/web/js/home_test_1.js" working-dir="$PROJECT_DIR$/web/js">
+      <method v="2" />
+    </configuration>
+    <configuration name="Tomcat 8.5.43" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.43" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:80" />
+      <deployment>
+        <artifact name="zybolg:war exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="/" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="Tomcat_8_5_43_zybolg" />
+        <option name="HTTP_PORT" value="80" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="51608" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="zybolg:war exploded" />
+        </option>
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.testMyJFrame" />
+      <item itemvalue="Application.getNetImg" />
+      <item itemvalue="Node.js.home_test_1.js" />
+      <item itemvalue="Tomcat Server.Tomcat 8.5.43" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.getNetImg" />
+        <item itemvalue="Application.testMyJFrame" />
+        <item itemvalue="Node.js.home_test_1.js" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="699babb9-f752-4466-9eef-5a901dc4dabf" name="Default Changelist" comment="" />
+      <created>1571149279549</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1571149279549</updated>
+      <workItem from="1571149281541" duration="1591000" />
+      <workItem from="1571209434030" duration="625000" />
+      <workItem from="1571228677735" duration="7174000" />
+      <workItem from="1571285081463" duration="34095000" />
+      <workItem from="1571392300450" duration="4909000" />
+      <workItem from="1571452340822" duration="40348000" />
+      <workItem from="1571539696219" duration="7053000" />
+      <workItem from="1571579264113" duration="856000" />
+      <workItem from="1571619509200" duration="3049000" />
+      <workItem from="1571630307902" duration="1741000" />
+      <workItem from="1571632084444" duration="4808000" />
+      <workItem from="1571641449862" duration="14525000" />
+      <workItem from="1571664690361" duration="633000" />
+      <workItem from="1571706805783" duration="1509000" />
+      <workItem from="1571817250543" duration="1382000" />
+      <workItem from="1571839569634" duration="2967000" />
+      <workItem from="1571902105860" duration="10281000" />
+      <workItem from="1571971565430" duration="17818000" />
+      <workItem from="1572009418219" duration="8744000" />
+      <workItem from="1572072417425" duration="6013000" />
+      <workItem from="1572083718226" duration="1270000" />
+      <workItem from="1572085589670" duration="80000" />
+      <workItem from="1572260051993" duration="221000" />
+      <workItem from="1572590114621" duration="1693000" />
+      <workItem from="1572752597489" duration="7290000" />
+      <workItem from="1572862936101" duration="2453000" />
+      <workItem from="1572866920876" duration="86000" />
+      <workItem from="1573321882154" duration="74000" />
+      <workItem from="1573785826982" duration="1116000" />
+      <workItem from="1573813620451" duration="21000" />
+      <workItem from="1576738151752" duration="6317000" />
+      <workItem from="1576746818873" duration="4552000" />
+      <workItem from="1576806389948" duration="10331000" />
+      <workItem from="1576891890622" duration="58006000" />
+      <workItem from="1576982148111" duration="24290000" />
+      <workItem from="1577070924324" duration="12623000" />
+      <workItem from="1577106814588" duration="2385000" />
+      <workItem from="1577109284860" duration="2312000" />
+      <workItem from="1577147210149" duration="7068000" />
+      <workItem from="1577156540778" duration="66000" />
+      <workItem from="1577159890862" duration="1195000" />
+      <workItem from="1577239822149" duration="2156000" />
+      <workItem from="1577260950853" duration="1932000" />
+      <workItem from="1577351525614" duration="3352000" />
+      <workItem from="1577356882555" duration="227000" />
+      <workItem from="1578812632055" duration="4538000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+</project>

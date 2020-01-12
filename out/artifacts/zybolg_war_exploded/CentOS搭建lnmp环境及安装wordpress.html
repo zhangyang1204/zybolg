@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>CentOS搭建lnmp环境及安装wordpress</title>
+		<meta name="viewport" content="width=device-width, initial-scale=0.5, maximum-scale=1,user-scalable=no">
+		<meta name="keywords" content="搭建网站,教程,Linux,CentOS,详细,lnmp环境" />
+		<meta name="description" content="小白0基础搭建网站教程"/>
+		<link rel="stylesheet" type="text/css" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css"  href="css/artical_1.css" />
+		<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+		<script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+		<!--jQuery 的 cookie插件-->
+		<script src="js/jquery.cookie.js"></script>
+		<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+		<script src="http://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="js/akeycopy.js"></script>
+		<script src="js/recordVisitLog.js" type="text/javascript"></script>
+	</head>
+	<body>
+	<!--页面id-->
+	<input type="hidden" name="pageID" value="1"/>
+		<ul  class="nav nav-tabs visible-xs" style="opacity: 0.6;background-color: gainsboro;">
+			<li><a href="#" style="font-size: 18px;font-weight: bold; color: #66AFE9;">inlightcone.cn</a></li>
+			<li style="float: right;"><a href="#" style="font-size: 18px;font-weight: bold;color: black;">Young的博客小站</a></li>	
+		</ul>
+				<div class="artical">
+					<p class="visible-xs">(本篇博文建议在PC端浏览)</p>
+					<div class="title ">CentOS搭建LNMP环境及安装WordPress</div>
+					<div class="date">2019-6-15</div>
+					<hr />
+					<div>
+						本教程系我踩过无数次坑后总结的,结合了腾讯云和阿里云的官方文档以及在网上搜到的各种解决方案,
+						适合初次建站的小白使用。当然,你最好有会一些linux基础知识和数据库命令。不过也不是必须的,就算你什么也不会
+						也不用担心,只要跟着本教程一步一步走,也是能完成网站的搭建的。另外如果你遇到了一些困难,建议自行上网解决或给我私信,我看到后会尽量回复。 
+					</div>
+					<h2>LNMP是什么</h2>
+					<div class="h2Text bg-warning" style="padding-top: 30px;padding-right: 50px;">
+						<p>Linux：Linux系统(本文为 CentOS 7.2);</p>
+						<p>Nginx：Web服务器程序，用来解析Web程序;</p>
+						<p>MySQL(MariaDB)：一个数据库管理系统;</p>
+						<p>PHP：Web服务器生成网页的程序;</p>
+					</div>
+					<h2>一.安装EPEL源</h2>
+					<div class="h2Text">
+						<div id="code1" class="code" style="float: left;">yum -y install epel-release.noarch</div>
+						<button type="button" class="btn btn-info" onclick="onCopy('#code1')">复制</button>
+					</div>
+					<h2>二.安装Nginx</h2>
+					<div class="h2Text">
+						<h3>1.运行以下命令安装Nginx。</h3>
+						<div class="h3Text">
+							<div id="code4" class="code" style="float: left;">yum -y install nginx</div>
+							<button type="button" class="btn btn-info" onclick="onCopy('#code4')">复制</button>
+						</div>
+						<h3>2.运行以下命令查看Nginx版本。</h3>
+						<div class="h3Text">
+							<div id="code5" class="code" style="float: left;">nginx -v</div>
+							<button type="button" class="btn btn-info" onclick="onCopy('#code5')">复制</button>
+						</div>
+						<p>返回结果如下所示，表示Nginx安装成功。(具体版本号以实际为准)</p>
+						<div class="code" style="float: left;">nginx version: nginx/1.12.2 </div>
+					</div>
+					<h2>三.安装Mariadb</h2>
+					<div class="h2Text">
+						<p>Mariadb是MySQL的一个分支,是为了MySQL闭源而开发的,其使用方法和MySQL几乎完全一致.</p>
+						<h3>1.运行以下命令安装MySQL。</h3>
+						<div class="h3Text">
+							<div id="code6" class="code" style="float: left;">yum -y install mariadb-community-server</div>
+							<button type="button" class="btn btn-info" onclick="onCopy('#code6')">复制</button>
+						</div>
+						<h3>2.启动Mariadb</h3>
+						<div class="h3Text">
+							<div id="code7" class="code" style="float: left;">systemctl start mariadb</div>
+							<button type="button" class="btn btn-info" onclick="onCopy('#code7')">复制</button>
+						</div>
+						<h3>3.设置MySQL服务器root用户的密码</h3>
+						<div class="h3Text">
+							<p>(本教程设置为 “123456”，后续步骤中需要用到此用户名和密码)</p>
+							<div id="code8" class="code" style="float: left;">/usr/bin/mysqladmin -u root password "123456"</div>
+							<button type="button" class="btn btn-info" onclick="onCopy('#code8')">复制</button>
+						</div>
+					</div>
+					<h2>四.安装PHP</h2>
+					<div class="h2Text">
+						<h3>1.运行以下命令安装PHP。</h3>
+						<div class="h3Text">
+							<div id="code9" class="code" style="float: left;">yum install php php-fpm php-mariadb -y</div>
+							<button type="button" class="btn btn-info" onclick="onCopy('#code9')">复制</button>
+						</div>
+						<h3>2.查看PHP版本。</h3>
+						<div class="h3Text">
+							<div id="code10" class="code" style="float: left;">php -v</div>
+							<button type="button" class="btn btn-info" onclick="onCopy('#code9')">复制</button>
+						</div>
+					</div>
+					<h2>五.配置Nginx</h2>
+					<div class="h2Text">
+						<h3>1.运行以下命令打开Nginx配置文件。</h3>
+						<div class="h3Text">
+							<div id="code11" class="code" style="float: left;">vim /etc/nginx/nginx.conf</div>
+							<button type="button" class="btn btn-info" onclick="onCopy('#code11')">复制</button>
+						</div>
+						<h3>2.按i进入编辑模式</h3>
+						<h3>3.把server内容改为如下,使Nginx支持PHP请求。修改完成后，按“Esc”键，输入“:wq”，保存文件返回 。</h3>
+						<div class="h3Text">
+							<div>
+								<div style="width: 600px;height:30px;float: left;"></div><button type="button" class="btn btn-info" onclick="onCopy('#code2')" style="float: left;">复制</button>
+							</div>
+							<div style="clear: left;margin-left: 50px;margin-top: 20px;width: 600px;"><pre class="longCode">server {
+        
+        listen       80 default_server;
+        listen       [::]:80 default_server;
+        server_name  _;
+        root /usr/share/php;
+        # Load configuration files for the default server block.
+        include /etc/nginx/default.d/*.conf;
+
+
+                    location / {
+            index index.php index.html index.htm;
+        }
+        #配置Nginx通过fastcgi方式处理您的PHP请求
+        location ~ .php$ {
+
+            fastcgi_pass 127.0.0.1:9000; #Nginx通过本机的9000端口将PHP请求转发给PHP-FPM进行处理>。
+            fastcgi_index index.php;
+            fastcgi_param  SCRIPT_FILENAME  $document_root$fastcgi_script_name;
+            include fastcgi_params;  #Nginx调用fastcgi接口处理PHP请求
+        }
+
+        error_page 404 /404.html;
+            location = /40x.html {
+        }
+
+        error_page 500 502 503 504 /50x.html;
+            location = /50x.html {
+        }
+    }</pre></div>
+						</div>
+
+						<p style="margin-left: 30px;font-size: 21px; font-weight: bold;">注:root后面的目录是你网站的根目录</p>
+						<h3>4.运行以下命令启动Nginx服务</h3>
+						<div class="h3Text">
+							<div id="code12" class="code" style="float: left;">systemctl start nginx</div>
+							<button type="button" class="btn btn-info" onclick="onCopy('#code12')">复制</button>
+						</div>
+						<h3>5.运行以下命令添加Nginx服务开机自启动。</h3>
+						<div class="h3Text">
+							<div id="code13" class="code" style="float: left;">systemctl enable nginx</div>
+							<button type="button" class="btn btn-info" onclick="onCopy('#code13')">复制</button>
+							<p style="margin-left: 30px;font-size: 21px; font-weight: bold;padding-top: 25px;margin-bottom: 15px;">这里需要特别注意的是,以后你可能会根据需要再次修改本文件(例如更改网站根目录或设置上传文件大小限制), 而每次当你修改后切记需执行以下命令重启Nginx,否则改动无法生效!!!
+							</p>
+							<div id="code14" class="code" style="float: left;">systemctl restart nginx</div>
+							<button type="button" class="btn btn-info" onclick="onCopy('#code14')">复制</button>
+						</div>
+					</div>
+					<h2>六.配置PHP</h2>
+					<div class="h2Text">
+						<h3>1.在/usr/share/php目录下新建index.php文件.具体步骤如下：</h3>
+						<div class="h3Text">
+							<h4>	1.1 运行命令打开文件</h4>
+							<div class="h4Text">
+								<div id="code15" class="code" style="float: left;">vim /usr/share/php/index.php</div>
+								<button type="button" class="btn btn-info" onclick="onCopy('#code15')">复制</button>
+							</div>
+							<h4>	1.2 按i进入编辑模式。</h4>
+							<h4>	1.3 输入下列内容。</h4>
+							<div class="h4Text">
+								<div class="code" style="float: left;">
+									&lt;?php echo "Hello World" ?>
+								</div>
+								<p style="font-size: 21px;font-weight: bold;margin: 10px 20px;padding-top: 10px;"> 按：wq保存并退出。</p>
+							</div>
+						</div>
+						<h3>2.运行以下命令启动PHP-FPM。</h3>
+						<div class="h3Text">
+							<div id="code16" class="code" style="float: left;">systemctl start php-fpm</div>
+							<button type="button" class="btn btn-info" onclick="onCopy('#code16')">复制</button>
+						</div>
+
+						<h3>3.运行以下命令设置PHP-FPM开机自启动。</h3>
+						<div class="h3Text">
+							<div id="code17" class="code" style="float: left;">systemctl enable php-fpm</div>
+							<button type="button" class="btn btn-info" onclick="onCopy('#code17')">复制</button>
+						</div>
+					</div>
+					<h2>七.测试访问</h2>
+					<div class="h2Text">打开浏览器。 在地址栏输入 http://服务器实例公网IP地址/index.php 返回结果如下图所示，表示LNMP环境部署成功
+						<div class="img"><img class="img-responsive center-block" src="img/lnmp成功文件.png" /></div>
+					</div>
+					<h2>八.安装和配置WordPress</h2>
+					<div class="h2Text">
+						<h3>1.下载WordPress并解压到当前目录</h3>
+						<div class="h3Text">
+							<h4>1.1 	下载</h4>
+							<div class="h4Text">
+								<div id="code18" class="code" style="float: left;">wget https://cn.wordpress.org/wordpress-4.7.4-zh_CN.tar.gz</div>
+								<button type="button" class="btn btn-info" onclick="onCopy('#code18')" >复制</button>
+								
+							</div>
+							<h4>1.2 	 解压</h4>
+							<div class="h4Text">
+								<div id="code19" class="code" style="float: left;">tar zxvf wordpress-4.7.4-zh_CN.tar.gz</div>
+								<button type="button" class="btn btn-info" onclick="onCopy('#code19')">复制</button>
+							</div>
+						</div>
+						<h3>2.配置数据库</h3>
+						<h4>	2.1 	登录MySQL服务器。</h4>
+						<div class="h4Text">
+							<div id="code20" class="code" style="float: left;">mysql -p identified by '123456'</div>
+							<button type="button" class="btn btn-info" onclick="onCopy('#code20')">复制</button>
+						</div>
+						<h4>	2.2 	为WordPress创建MySQL数据库“wordpress”,并为此用户设置密码“wordpresspassword”。</h4>
+						<div class="h4Text">
+							<div id="code19" class="code" style="float: left;">CREATE DATABASE wordpress;</div>
+							<button type="button" class="btn btn-info" onclick="onCopy('#code19')">复制</button>
+						</div>
+						<h4>	2.3 	为已创建好的MySQL数据库创建一个新用户 “user@localhost”。</h4>
+						<p style="font-size: 20px; font-weight: bold;">user为你自己起的用户名,localhost不要改动,passward请自行设置但需要包含同时包含大写字母,小写字母和符号!)</p>
+						<div class="h4Text">
+							<div id="code20" class="code" style="float: left;">CREATE USER user@localhost identified by 'passward';</div>
+							<button type="button" class="btn btn-info" onclick="onCopy('#code20')">复制</button>
+						</div>
+						<h4>	2.4 	为创建的用户开通数据库“wordpress”的完全访问权限。</h4>
+						<div class="h4Text">
+							<div style="width: 100%;">
+								<button type="button" class="btn btn-info" onclick="onCopy('#code21')" style="float: right;">复制</button>
+							</div>
+
+							<div id="code21" class="code" style="float: left;">GRANT ALL PRIVILEGES ON wordpress.* TO user@localhost IDENTIFIED BY 'wordpresspassword';</div>
+
+						</div>
+						<h4>	2.5 	使用以下命令使所有配置生效。</h4>
+						<div class="h4Text">
+							<div id="code22" class="code" style="float: left;">FLUSH PRIVILEGES;</div>
+							<button type="button" class="btn btn-info" onclick="onCopy('#code22')">复制</button>
+						</div>
+						<h4>	2.6 	配置完成，退出MySQL。</h4>
+						<div class="h4Text">
+							<div id="code23" class="code" style="float: left;">exit</div>
+							<button type="button" class="btn btn-info" onclick="onCopy('#code23')">复制</button>
+						</div>
+						<h3>3.写入数据库信息</h3>
+						<div class="h3Text">
+							<h4>3.1 	打开并编辑新创建的配置文件。</h4>
+							<div class="h4Text">
+								<div id="code24" class="code" style="float: left;">vim wp-config.php</div>
+								<button type="button" class="btn btn-info" onclick="onCopy('#code24')">复制</button>
+							</div>
+							<h4>3.2 	找到文件中 MySQL的部分，按字母“I”键或 “Insert” 键切换至编辑模式，将步骤2 中已配置好的数据库相关信息写入：</h4>
+							<div style="width: 600px;"><pre class="longCode" style="line-height: 200%;"> 
+ // ** MySQL settings - You can get this info from your web host ** // 
+ /** The name of the database for WordPress */ 
+ 	define('DB_NAME', 'wordpress');
+ /** MySQL database username */ 
+ 	define('DB_USER', 'user'); 
+ /** MySQL database password */
+ 	define('DB_PASSWORD', 'wordpresspassword');
+ /** MySQL hostname */ 
+ 	define('DB_HOST', 'localhost'); 
+					 </pre></div> 修改完成后，按“Esc”键，输入“:wq”，保存文件返回 。
+						</div>
+						<h3>4.安装wordpress</h3>
+						<div class="h3Text">
+							<h4>	4.1 	移动安装文件至Web服务器文档根目录，以便可以运行安装脚本完成安装。</h4>
+							<div class="h4Text">
+								<div id="code25" class="code" style="float: left;">mv * /usr/share/php/</div>
+								<button type="button" class="btn btn-info" onclick="onCopy('#code25')">复制</button>
+							</div>
+
+							<h4>	4.2 	在Web浏览器地址栏输入WordPress站点的IP地址（云服务器实例的公网 IP 地址，或者该地址后跟 “wordpress文件夹”），可以看到 WordPress 安装屏幕，就可以根据其提示开始配置 WordPress了。</h4>
+
+							<h4>	4.3 	将其余安装信息输入WordPress安装向导，单击 “安装 WordPress”完成安装。</h4>
+						</div>
+					</div>
+					<h4></h4>
+					<!--
+                     	作者：1731611934@qq.com
+                     	时间：2019-06-12
+                     	描述：上面这一行必须要有东西,否则 .artical将不能包括其最后一个.h2Text div
+                     	不知原因
+                     -->
+				</div>
+		<!-- textarea用于缓存复制到的内容 -->
+		<textarea id="tmp" style="height:0;width:0;opacity: 0;"></textarea>
+	</body>
+</html>

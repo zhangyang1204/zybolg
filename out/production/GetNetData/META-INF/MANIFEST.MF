@@ -1,0 +1,18 @@
+Manifest-Version: 1.0
+Main-Class: zy.Main
+Class-Path: jna-4.1.0.jar junit-4.12.jar itext-2.1.7.jar lept4j-1.6.4.ja
+ r log4j-1.2.17.jar pdfbox-2.0.9.jar tess4j-3.4.8.jar fontbox-2.0.9.jar 
+ ghost4j-1.0.1.jar commons-io-2.6.jar slf4j-api-1.7.25.jar hamcrest-core
+ -1.3.jar logback-core-1.2.3.jar pdfbox-tools-2.0.9.jar commons-logging-
+ 1.2.jar jbig2-imageio-3.0.0.jar jul-to-slf4j-1.7.25.jar jcl-over-slf4j-
+ 1.7.25.jar logback-classic-1.2.3.jar jai-imageio-core-1.4.0.jar jboss-v
+ fs-3.2.12.Final.jar commons-beanutils-1.9.2.jar log4j-over-slf4j-1.7.25
+ .jar xmlgraphics-commons-1.5.jar jna-4.1.0.jar junit-4.12.jar itext-2.1
+ .7.jar lept4j-1.6.4.jar log4j-1.2.17.jar pdfbox-2.0.9.jar tess4j-3.4.8.
+ jar fontbox-2.0.9.jar ghost4j-1.0.1.jar commons-io-2.6.jar slf4j-api-1.
+ 7.25.jar hamcrest-core-1.3.jar logback-core-1.2.3.jar pdfbox-tools-2.0.
+ 9.jar commons-logging-1.2.jar jbig2-imageio-3.0.0.jar jul-to-slf4j-1.7.
+ 25.jar jcl-over-slf4j-1.7.25.jar logback-classic-1.2.3.jar jai-imageio-
+ core-1.4.0.jar jboss-vfs-3.2.12.Final.jar commons-beanutils-1.9.2.jar l
+ og4j-over-slf4j-1.7.25.jar xmlgraphics-commons-1.5.jar
+

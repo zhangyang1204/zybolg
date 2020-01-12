@@ -1,0 +1,134 @@
+			.code {
+				/*width: 600px;*/
+				background-color: black;
+				color: greenyellow;
+				font-size: 18px;
+				text-align: left;
+				line-height: 140%;
+				padding: 5px;
+				overflow-x: auto;
+				margin-left: 50px;
+				padding-left: 0px;
+			}
+			
+			.artical {
+				font-size: 21px;
+				margin-top: 0px;
+				padding-top: 0px;
+				padding-left: 30px;
+				padding-right: 40px;
+				padding-bottom: 30px;
+				/*行间距*/
+				line-height: 180%;
+				background-color: white;
+				/*缩进*/
+				text-indent: 42px;
+				/*字间距*/
+				letter-spacing: 1.2px;
+				font-family: 宋体, 黑体, Arial, Verdana, arial, serif;
+				text-align: justify;
+				/*min-width: inherit;*/
+				font-weight: 600;
+				width: 100%;
+			}
+			
+			pre {
+				clear: left;
+				border: none;
+			}
+			
+			h2 {
+				clear: left;
+			}
+			
+			.h2Text {
+				margin-top: 20px;
+				margin-left: 40px;
+				padding-bottom: 30px;
+				/*padding-top: ;*/
+				/*padding-right: 30px;*/
+				font-size: 23px;
+				float: left;
+			}
+			
+			h3 {
+				clear: left;
+			}
+			
+			.h3Text {
+				/*margin-left: 80px;*/
+				margin-top: 30px;
+				padding-bottom: 30px;
+			}
+			
+			h4 {
+				clear: left;
+			}
+			
+			.h4Text {
+				/*margin-left: 80px;*/
+				margin-top: 30px;
+				padding-bottom: 30px;
+			}
+			
+			button {
+				float: left;
+			}
+			
+			.img {
+				margin-top: 50px;
+				margin-bottom: 30px;
+				clear: left;
+				text-align: center;
+			}
+			
+			p {
+				clear: left;
+			}
+			
+			.longCode {
+				background-color: #000000;
+				color: greenyellow;
+				font-size: 15px;
+				overflow-x: auto;
+			}
+			
+			.title {
+				font-family: 黑体, 宋体, Arial, Verdana, arial, serif;
+				font-size: 45px;
+				/*文本居中*/
+				text-align: center;
+				padding-top: 55px;
+				margin-bottom: 20px;
+				
+			}
+			
+			hr {
+				width: 90%;
+				height: 2px;
+			}
+			
+			.date {
+				float: right;
+				padding-right: 80px;
+			}
+			
+			blockquote {
+				font-size: larger;
+			}
+			
+			.explain {
+				text-align: right;
+				margin-bottom: 20px;
+			}
+			
+			.announce {
+				text-align: center;
+				width: 100%;
+				background-color: white;
+				padding-bottom: 20px;
+			}
+			
+			body {
+				
+			}
